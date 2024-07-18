@@ -1,0 +1,14 @@
+[Unit]
+Description=My Telegram Bot
+After=network.target redis.service
+
+[Service]
+Type=simple
+WorkingDirectory=/absolute_path/to/your/working/directory
+ExecStart=hatch run python -O -m bot
+KillMode=process
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

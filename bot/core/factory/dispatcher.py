@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from aiogram.fsm.storage.mongo import MongoStorage
     from aiogram.fsm.storage.redis import RedisStorage
 
-    from bot.core.config import Config
+    from bot.config import Config
 
 
 def create_dispatcher(config: Config) -> Dispatcher:

@@ -9,7 +9,7 @@ from aiohttp import web
 if TYPE_CHECKING:
     from aiogram import Bot, Dispatcher
 
-    from bot.core.config import Config
+    from bot.config import Config
 
 from .polling import polling_shutdown, polling_startup
 from .webhook import webhook_shutdown, webhook_startup

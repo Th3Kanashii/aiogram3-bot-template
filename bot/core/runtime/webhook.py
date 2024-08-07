@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     from aiogram_i18n import I18nMiddleware
     from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-    from bot.core.config import Config
+    from bot.config import Config
 
 
 async def webhook_startup(dispatcher: Dispatcher, bot: Bot, config: Config) -> None:

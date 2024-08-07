@@ -17,7 +17,7 @@ from bot.services.database import create_pool
 if TYPE_CHECKING:
     from aiogram import Dispatcher
 
-    from bot.core.config import Config
+    from bot.config import Config
 
 
 def setup_filters(dispatcher: Dispatcher) -> None:

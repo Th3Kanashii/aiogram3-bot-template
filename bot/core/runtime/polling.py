@@ -10,7 +10,7 @@ if TYPE_CHECKING:
     from aiogram_i18n import I18nMiddleware
     from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-    from bot.core.config import Config
+    from bot.config import Config
 
 
 async def polling_startup(bot: Bot, dispatcher: Dispatcher, config: Config) -> None:

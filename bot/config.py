@@ -28,6 +28,8 @@ class BotConfig(BaseSettings, env_prefix="BOT_"):
     Attributes:
         token (SecretStr): Bot token.
         use_redis (bool): Use Redis.
+        use_mongo (bool): Use Mongo.
+        drop_pending_updates (bool): Drop pending updates.
     """
 
     token: SecretStr
@@ -167,3 +169,16 @@ class Config(BaseModel):
     webhook: WebhookConfig
     redis: RedisConfig | None = None
     mongo: MongoConfig | None = None
+
+
+def create_config() -> Config:
+    """
+    Load configuration settings.
+
+    :return: Configuration settings.
+    """
+    return Config(
+        bot=BotConfig(),
+        postgres=PostgresConfig(),
+        webhook=WebhookConfig(),
+    )

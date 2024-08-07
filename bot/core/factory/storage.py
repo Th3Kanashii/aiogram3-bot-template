@@ -10,7 +10,7 @@ from redis.asyncio import ConnectionPool, Redis
 
 
 if TYPE_CHECKING:
-    from bot.core.config import Config
+    from bot.config import Config
 
 
 def get_storage(config: Config) -> MemoryStorage | RedisStorage | MongoStorage:

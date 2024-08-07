@@ -8,7 +8,7 @@ from aiogram.enums import ParseMode
 
 
 if TYPE_CHECKING:
-    from bot.core.config import Config
+    from bot.config import Config
 
 
 def create_bot(config: Config) -> Bot:

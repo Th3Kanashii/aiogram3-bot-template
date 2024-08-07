@@ -7,9 +7,10 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from aiogram import Bot, Dispatcher
 
-    from .core.config import Config
+    from .config import Config
 
-from .core.instances import create_bot, create_config, create_dispatcher
+from .config import create_config
+from .core.factory import create_bot, create_dispatcher
 from .core.runtime import run_polling, run_webhook
 from .utils.logging import setup_logger
 

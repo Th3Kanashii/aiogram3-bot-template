@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING
 
 from aiogram import loggers
 
-from bot.utils.commands import set_default_commands
+from bot.utils import set_default_commands
 
 
 if TYPE_CHECKING:
